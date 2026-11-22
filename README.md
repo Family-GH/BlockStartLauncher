@@ -2,9 +2,19 @@
 
 > A third-party Minecraft: Java Edition launcher for Windows.
 
-BlockStart Launcher (BSL) is a Minecraft launcher developed by MC_Family with Python and PySide6, packaged with PyInstaller. The current version is V0.5.3b. It brings game version downloading, instance management, account authentication, mod and modpack installation, resource management and file repair into a single window, aimed at players who need to keep several separate game environments on Windows.
+BlockStart Launcher (BSL) is a Minecraft Java Edition launcher for Windows, currently at V0.5.3b. Game version downloading, isolated instances, Microsoft and offline accounts, Fabric / Forge / NeoForge / Quilt installation, Modrinth mods and modpacks, resource and shader packs, file verification and crash diagnosis all live in one window. It is meant for players who keep several separate game setups on one machine.
 
-[中文说明](README.zh-CN.md) · [Changelog](CHANGELOG.md)
+[中文说明](README.zh-CN.md) · [Changelog](CHANGELOG.md) · [Quick start](docs/QUICKSTART.md)
+
+## Quick start
+
+1. Download `BlockStartLauncherPortable.zip` from [Releases](https://github.com/Family-GH/BlockStartLauncher/releases/latest) and unpack it into an ASCII-only path such as `D:\Games\BSL`.
+2. Run `BlockStartLauncherPortable.exe`. If SmartScreen appears, choose **More info → Run anyway**.
+3. Sign in with a Microsoft account on the Accounts page, or create an offline account first.
+4. Press **New instance** on the Home page, pick a game version (and a loader if you need mods), then press **Launch game**.
+5. The first launch downloads the game files; later launches are a single click.
+
+The full walkthrough, the exact button for every step, and the mistakes that cause most failures are in the [quick start guide](docs/QUICKSTART.md).
 
 ## Features
 
@@ -105,6 +115,29 @@ The single-file build outputs `dist/BlockStartLauncher.exe`. Setting `BSL_ONEDIR
 - Microsoft login has only been verified in failure branches and headless runs, not with a real account through the whole authorisation flow.
 - Windows only.
 - The launcher does not ship the game itself; online play and official skins still require a Microsoft account that owns Minecraft: Java Edition.
+
+## FAQ
+
+**"Windows protected your PC" on first run?**
+The build has no commercial code-signing certificate. Choose **More info → Run anyway**. Removing the prompt entirely requires a purchased certificate; renaming or compressing the file does nothing.
+
+**A security suite blocks it or reports a modified DLL?**
+The single-file build unpacks into `.bsl_runtime` on every start, which triggers those prompts. Use the portable build, or allow the operation.
+
+**The game fails to start with a Java error?**
+Re-detect under **Settings → Java runtime**, or choose `bin\java.exe` manually. The launcher can also download a matching runtime.
+
+**The version list stays empty?**
+Check the connection, press **Retry version list**, or switch the download route under **Settings → Downloads**.
+
+**A mod is installed but has no effect?**
+Make sure the mod matches the instance's game version and loader, and that it is ticked in the installed list. Mixed loaders are reported before launch.
+
+**My accounts are gone after moving to another machine?**
+Account credentials are encrypted per Windows user and cannot be decrypted elsewhere; sign in again. Saves and instances can be copied with the data directory.
+
+**Does the launcher need a network connection?**
+Yes for the first download of a game version, mod searches and update checks. Installed versions can be launched offline.
 
 ## Repository layout
 

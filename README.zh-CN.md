@@ -1,10 +1,20 @@
 # BlockStart Launcher
 
-> 一款面向 Windows 平台的 Minecraft Java 版第三方启动器。
+> 一款面向 Windows 平台的 Minecraft（MC）Java 版第三方启动器。
 
-BlockStart Launcher（简称 BSL）是由 MC_Family 使用 Python 与 PySide6 开发、PyInstaller 打包的 Minecraft 启动器，当前版本 V0.5.3b。启动器将游戏版本下载、实例管理、账户登录、模组与整合包安装、资源管理和文件修复集中在同一界面内完成，面向需要在 Windows 上集中管理多个游戏环境的玩家。
+BlockStart Launcher（简称 BSL）是 Windows 上的 Minecraft Java 版启动器，当前版本 V0.5.3b。它把游戏版本下载、多版本实例管理、正版与离线账户登录、Fabric / Forge / NeoForge / Quilt 加载器安装、Modrinth 模组与整合包、资源包与光影、文件校验与崩溃诊断集中在同一个界面里，适合需要在本机维护多个独立游戏环境的玩家。
 
-[English](README.md) · [更新记录](CHANGELOG.md)
+[English](README.md) · [更新记录](CHANGELOG.md) · [快速上手（零基础）](docs/QUICKSTART.zh-CN.md)
+
+## 快速开始
+
+1. 从 [Releases](https://github.com/Family-GH/BlockStartLauncher/releases/latest) 下载 `BlockStartLauncherPortable.zip`，解压到纯英文路径（如 `D:\Games\BSL`）。
+2. 双击 `BlockStartLauncherPortable.exe`。SmartScreen 提示时选「更多信息 → 仍要运行」。
+3. 账户页登录 Microsoft 账户，或先建一个离线账户。
+4. 主页点「新建实例」，选游戏版本（需要模组就顺带选加载器），再点「启动游戏」。
+5. 首次启动会自动下载游戏文件，之后每次只需点一次启动。
+
+完整步骤、每一步对应的按钮，以及最容易出错的十几个操作，见 [快速上手文档](docs/QUICKSTART.zh-CN.md)。
 
 ## 功能特性
 
@@ -105,6 +115,29 @@ py -3 BlockStartLauncher\build_exe.py
 - 微软登录流程仅在错误分支与离屏环境下完成验证，未使用真实账户跑完整授权流程。
 - 目前仅支持 Windows 系统。
 - 启动器本身不提供 Minecraft 游戏本体，联机与官方皮肤功能仍需合法拥有的 Microsoft 账户。
+
+## 常见问题
+
+**双击后提示“Windows 已保护你的电脑”？**
+程序没有商业代码签名证书。点「更多信息 → 仍要运行」。需要彻底消除提示只能购买签名证书，改名或压缩都无效。
+
+**杀毒软件报拦截、提示修改关键 DLL？**
+单文件版每次启动都会解包到 `.bsl_runtime`，容易被拦截。改用便携版，或选择「允许本次操作」。
+
+**游戏启动失败，提示 Java 相关错误？**
+设置页 →「Java 运行环境」重新检测，或手动选择 `bin\java.exe`；也可以让启动器下载对应运行时。
+
+**版本列表一直是空的？**
+检查网络后点「重试版本列表」，或到「设置」→「下载」切换下载线路。
+
+**模组装了却不生效？**
+确认模组的游戏版本与加载器跟当前实例一致，并且该模组已勾选启用；混用加载器会被启动前提示。
+
+**换电脑后账户没了？**
+账户凭证按 Windows 用户加密，不能跨机器解密，重新登录即可；存档和实例可以直接拷数据目录。
+
+**启动器需要联网吗？**
+首次下载游戏版本、搜索模组、检查更新时都需要；已经装好的版本可以离线启动。
 
 ## 目录结构
 
