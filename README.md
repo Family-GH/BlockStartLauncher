@@ -65,12 +65,14 @@ BlockStart Launcher (BSL) is a Minecraft launcher developed by MC_Family with Py
 
 ## Download and run
 
-Two builds ship in `BlockStartLauncher/dist`. Both are split into chunks because of GitHub's 25 MB per-file limit, with a manifest holding the SHA-256 of every chunk. Run the `.bat` next to them; it joins the chunks on first use, then launches the result.
+Get the latest build from the [Releases page](https://github.com/Family-GH/BlockStartLauncher/releases/latest).
 
-| Build | Files | How to run |
+| Build | File | How to run |
 | --- | --- | --- |
-| Single file | `BlockStartLauncher.exe.part01`–`part03` + `start_blockstart.bat` | Double-click `start_blockstart.bat`. It joins the parts into `%LOCALAPPDATA%\BlockStartLauncher\release` on first use, then starts the launcher. |
-| Portable | `BlockStartLauncherPortable.zip.part01`–`part03` | Join the parts into one zip (`copy /b BlockStartLauncherPortable.zip.part01 + .part02 + .part03 BlockStartLauncherPortable.zip`), unpack it, then run `BlockStartLauncherPortable.exe`. Recommended: nothing is extracted at startup, so the security-software prompts tied to one-file builds do not appear. |
+| Portable | `BlockStartLauncherPortable.zip` | Recommended. Unpack it anywhere and run `BlockStartLauncherPortable.exe`. Nothing is extracted at startup, so the security-software prompts tied to one-file builds do not appear. |
+| Single file | `BlockStartLauncher.exe` | Run it directly; the first start unpacks into `%LOCALAPPDATA%\BlockStartLauncher`. |
+
+The same builds are versioned inside `BlockStartLauncher/dist`, split into sub-25 MB chunks because of GitHub's per-file limit, with a manifest holding the SHA-256 of every chunk. `start_blockstart.bat` joins the single-file chunks on first use and starts the launcher.
 
 The launcher needs administrator rights to write into the game directory; a UAC prompt appears otherwise.
 

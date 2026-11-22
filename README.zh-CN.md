@@ -65,14 +65,14 @@ BlockStart Launcher（简称 BSL）是由 MC_Family 使用 Python 与 PySide6 �
 
 ## 下载与运行
 
-`BlockStartLauncher/dist` 内提供两种构建，均按 GitHub 单文件 25MB 的限制拆成若干分片，并附带记录每个分片 SHA-256 的清单。双击对应的 `.bat` 即可，首次运行会合并分片再启动。
+最新构建在 [Releases 页面](https://github.com/Family-GH/BlockStartLauncher/releases/latest) 下载。
 
-| 版本 | 入口 | 说明 |
-| --- | --- | --- |
 | 版本 | 文件 | 运行方式 |
 | --- | --- | --- |
-| 单文件版 | `BlockStartLauncher.exe.part01`–`part03` + `start_blockstart.bat` | 双击 `start_blockstart.bat`，首次运行会把分片合并到 `%LOCALAPPDATA%\BlockStartLauncher\release` 再启动。 |
-| 便携版 | `BlockStartLauncherPortable.zip.part01`–`part03` | 先把分片拼成一个 zip（`copy /b BlockStartLauncherPortable.zip.part01 + .part02 + .part03 BlockStartLauncherPortable.zip`），解压后运行 `BlockStartLauncherPortable.exe`。推荐使用，启动时不解压，不会触发单文件类的安全软件提示。 |
+| 便携版 | `BlockStartLauncherPortable.zip` | 推荐。解压到任意目录，运行其中的 `BlockStartLauncherPortable.exe`；启动时不解压，不会触发单文件类的安全软件提示。 |
+| 单文件版 | `BlockStartLauncher.exe` | 直接运行，首次启动会解压到 `%LOCALAPPDATA%\BlockStartLauncher`。 |
+
+同样的构建也保存在 `BlockStartLauncher/dist` 中，按 GitHub 单文件 25MB 的限制拆成若干分片，并附带记录每个分片 SHA-256 的清单；`start_blockstart.bat` 会在首次运行时合并单文件版分片并启动。
 
 启动器需要管理员权限写入游戏目录，权限不足时会弹出 UAC 提示。
 
