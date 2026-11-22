@@ -1,0 +1,42 @@
+# Local build toolchain
+.build_env/
+.bsl_runtime/
+.piptmp/
+**/__pycache__/
+**/*.pyc
+**/build/
+**/*.spec
+**/.bsl_runtime/
+
+# Generated / restored executables (chunks are committed, exes are not)
+*.exe
+*.tmp
+*.lnk
+BlockStartLauncher/dist/BlockStartLauncherPortable/
+
+# Developer-only tooling, not part of the public release
+BSLUpdate/
+
+# Third-party music used locally as launcher BGM, not redistributed
+/*.mp3
+
+# User data and secrets must never be published
+BlockStartLauncher/mc/
+BlockStartLauncher/backups/
+BlockStartLauncher/logs/
+BlockStartLauncher/settings.json
+BlockStartLauncher/settings.json.*
+BlockStartLauncher/accounts.json
+BlockStartLauncher/accounts.json.*
+BSLUpdate/dist/config.json
+BSLUpdate/dist/drafts.json
+BSLUpdate/dist/history.json
+BSLUpdate/config.json
+
+# Machine-specific shortcut
+BlockStartLauncher-run.lnk
+
+# OS noise
+Thumbs.db
+desktop.ini
+.DS_Store

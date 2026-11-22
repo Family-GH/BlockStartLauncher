@@ -1,0 +1,25 @@
+{
+  "format": "bsl-release-chunks",
+  "version": 1,
+  "name": "BlockStartLauncherPortable.zip",
+  "size": 44577714,
+  "sha256": "9ffe234953165c96cdd880e87967549439b2ccd3e6f62c61b3831a135705c8c8",
+  "chunk_size": 20000000,
+  "parts": [
+    {
+      "name": "BlockStartLauncherPortable.zip.part01",
+      "size": 20000000,
+      "sha256": "6a50961375dd5a1bd3559154bfa938cd3508c0acc8a6ab4f6e54d6269d9ba971"
+    },
+    {
+      "name": "BlockStartLauncherPortable.zip.part02",
+      "size": 20000000,
+      "sha256": "ef119d954733782e7b717396a7b843a3a7449b43522004f96a230c9aae41c69a"
+    },
+    {
+      "name": "BlockStartLauncherPortable.zip.part03",
+      "size": 4577714,
+      "sha256": "4efe92580db15ee2948039a3b75fc79e58995f7eb50737ff54bb65679437bf27"
+    }
+  ]
+}
