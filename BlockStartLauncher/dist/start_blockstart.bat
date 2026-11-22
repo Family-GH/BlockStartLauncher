@@ -4,7 +4,7 @@ cd /d "%~dp0"
 
 set "TARGET_DIR=%LOCALAPPDATA%\BlockStartLauncher\release"
 set "TARGET=%TARGET_DIR%\BlockStartLauncher.exe"
-set "STAMP=%TARGET%.6f0579c6"
+set "STAMP=%TARGET%.b3612229"
 
 if exist "%TARGET%" if exist "%STAMP%" goto run
 
@@ -20,7 +20,7 @@ copy /b "BlockStartLauncher.exe.part01"+"BlockStartLauncher.exe.part02"+"BlockSt
 if errorlevel 1 goto failed
 move /y "%TARGET%.tmp" "%TARGET%" >nul
 if errorlevel 1 goto failed
-> "%STAMP%" echo 6f0579c6
+> "%STAMP%" echo b3612229
 
 :run
 start "" "%TARGET%"
@@ -42,6 +42,7 @@ echo %TARGET_DIR%
 echo.
 pause
 exit /b 1
+
 
 
 

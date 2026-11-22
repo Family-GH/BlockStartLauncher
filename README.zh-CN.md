@@ -2,7 +2,7 @@
 
 > 一款面向 Windows 平台的 Minecraft Java 版第三方启动器。
 
-BlockStart Launcher（简称 BSL）是由 MC_Family 使用 Python 与 PySide6 开发、PyInstaller 打包的 Minecraft 启动器，当前版本 V0.5.2b。启动器将游戏版本下载、实例管理、账户登录、模组与整合包安装、资源管理和文件修复集中在同一界面内完成，面向需要在 Windows 上集中管理多个游戏环境的玩家。
+BlockStart Launcher（简称 BSL）是由 MC_Family 使用 Python 与 PySide6 开发、PyInstaller 打包的 Minecraft 启动器，当前版本 V0.5.3b。启动器将游戏版本下载、实例管理、账户登录、模组与整合包安装、资源管理和文件修复集中在同一界面内完成，面向需要在 Windows 上集中管理多个游戏环境的玩家。
 
 [English](README.md) · [更新记录](CHANGELOG.md)
 
@@ -69,8 +69,10 @@ BlockStart Launcher（简称 BSL）是由 MC_Family 使用 Python 与 PySide6 �
 
 | 版本 | 入口 | 说明 |
 | --- | --- | --- |
-| 便携版 | `启动便携版.bat` | 推荐。解压到固定目录后直接启动，不会触发单文件解压类安全提示。 |
-| 单文件版 | `启动 BlockStart Launcher.bat` | 自解压单文件，运行时合并到 `%LOCALAPPDATA%\BlockStartLauncher\release`。 |
+| 版本 | 文件 | 运行方式 |
+| --- | --- | --- |
+| 单文件版 | `BlockStartLauncher.exe.part01`–`part03` + `start_blockstart.bat` | 双击 `start_blockstart.bat`，首次运行会把分片合并到 `%LOCALAPPDATA%\BlockStartLauncher\release` 再启动。 |
+| 便携版 | `BlockStartLauncherPortable.zip.part01`–`part03` | 先把分片拼成一个 zip（`copy /b BlockStartLauncherPortable.zip.part01 + .part02 + .part03 BlockStartLauncherPortable.zip`），解压后运行 `BlockStartLauncherPortable.exe`。推荐使用，启动时不解压，不会触发单文件类的安全软件提示。 |
 
 启动器需要管理员权限写入游戏目录，权限不足时会弹出 UAC 提示。
 

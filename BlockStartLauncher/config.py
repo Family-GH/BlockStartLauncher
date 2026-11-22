@@ -4,7 +4,7 @@ import sys
 
 MINECRAFT_DIR = "mc"
 LAUNCHER_NAME = "BlockStart"
-LAUNCHER_VERSION = "0.5.2b"
+LAUNCHER_VERSION = "0.5.3b"
 LAUNCHER_AUTHOR = "MC_Family"
 DEFAULT_USERNAME = "Player"
 USER_AGENT = f"{LAUNCHER_NAME}/{LAUNCHER_VERSION} ({LAUNCHER_AUTHOR})"
@@ -75,4 +75,5 @@ def minecraft_dir():
     if _GAME_DIR:
         return _GAME_DIR
     return os.path.join(data_dir(), MINECRAFT_DIR)
+
 

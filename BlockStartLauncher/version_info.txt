@@ -16,16 +16,17 @@
         [
           StringStruct('CompanyName', 'MC_Family'),
           StringStruct('FileDescription', 'BlockStart Launcher'),
-          StringStruct('FileVersion', '0.5.2b'),
+          StringStruct('FileVersion', '0.5.3b'),
           StringStruct('InternalName', 'BlockStartLauncher'),
           StringStruct('LegalCopyright', 'Copyright (C) MC_Family'),
           StringStruct('OriginalFilename', 'BlockStartLauncher.exe'),
           StringStruct('ProductName', 'BlockStart Launcher'),
-          StringStruct('ProductVersion', '0.5.2b')
+          StringStruct('ProductVersion', '0.5.3b')
         ]
       )
     ]),
     VarFileInfo([VarStruct('Translation', [1033, 1200])])
   ]
 )
+
 

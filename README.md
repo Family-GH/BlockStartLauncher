@@ -2,7 +2,7 @@
 
 > A third-party Minecraft: Java Edition launcher for Windows.
 
-BlockStart Launcher (BSL) is a Minecraft launcher developed by MC_Family with Python and PySide6, packaged with PyInstaller. The current version is V0.5.2b. It brings game version downloading, instance management, account authentication, mod and modpack installation, resource management and file repair into a single window, aimed at players who need to keep several separate game environments on Windows.
+BlockStart Launcher (BSL) is a Minecraft launcher developed by MC_Family with Python and PySide6, packaged with PyInstaller. The current version is V0.5.3b. It brings game version downloading, instance management, account authentication, mod and modpack installation, resource management and file repair into a single window, aimed at players who need to keep several separate game environments on Windows.
 
 [中文说明](README.zh-CN.md) · [Changelog](CHANGELOG.md)
 
@@ -67,10 +67,10 @@ BlockStart Launcher (BSL) is a Minecraft launcher developed by MC_Family with Py
 
 Two builds ship in `BlockStartLauncher/dist`. Both are split into chunks because of GitHub's 25 MB per-file limit, with a manifest holding the SHA-256 of every chunk. Run the `.bat` next to them; it joins the chunks on first use, then launches the result.
 
-| Build | Entry | Notes |
+| Build | Files | How to run |
 | --- | --- | --- |
-| Portable | `启动便携版.bat` | Recommended. Unpacks once to a folder and starts from there, so one-file extraction warnings from security software do not appear. |
-| Single file | `启动 BlockStart Launcher.bat` | One self-extracting executable, reassembled in `%LOCALAPPDATA%\BlockStartLauncher\release`. |
+| Single file | `BlockStartLauncher.exe.part01`–`part03` + `start_blockstart.bat` | Double-click `start_blockstart.bat`. It joins the parts into `%LOCALAPPDATA%\BlockStartLauncher\release` on first use, then starts the launcher. |
+| Portable | `BlockStartLauncherPortable.zip.part01`–`part03` | Join the parts into one zip (`copy /b BlockStartLauncherPortable.zip.part01 + .part02 + .part03 BlockStartLauncherPortable.zip`), unpack it, then run `BlockStartLauncherPortable.exe`. Recommended: nothing is extracted at startup, so the security-software prompts tied to one-file builds do not appear. |
 
 The launcher needs administrator rights to write into the game directory; a UAC prompt appears otherwise.
 
@@ -118,3 +118,4 @@ BlockStartLauncher/
 tools/
   release_chunks.py      split, verify and restore release chunks
 ```
+

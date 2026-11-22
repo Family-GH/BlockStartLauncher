@@ -2,14 +2,14 @@
   "format": "bsl-release-chunks",
   "version": 1,
   "name": "BlockStartLauncher.exe",
-  "size": 44491196,
-  "sha256": "6f0579c679a9ec794df8557e9937b6018fc44cc71034f04c4cfb37b7f3723778",
+  "size": 44491754,
+  "sha256": "b361222932d59cb733fb17e8b085c19753590df1cfe27ec5b5410ef8e77b65a8",
   "chunk_size": 20000000,
   "parts": [
     {
       "name": "BlockStartLauncher.exe.part01",
       "size": 20000000,
-      "sha256": "a6c50528bc982dc170d46dab39e4615220a37d54def77a1fe0e7780f9c209092"
+      "sha256": "d8612a784c64d63bb8c8a431620da2886ff1b2258eeb539a674d48a0800cba3b"
     },
     {
       "name": "BlockStartLauncher.exe.part02",
@@ -18,8 +18,8 @@
     },
     {
       "name": "BlockStartLauncher.exe.part03",
-      "size": 4491196,
-      "sha256": "2a1309172ceebe211d45ca8ac1f82b6b3e8d7e2b101e3f261fde7ac03bb5e22d"
+      "size": 4491754,
+      "sha256": "093a5bb582d0cc7a0927b842354ccbd9fd4e4fadfdf835153853e417b7c53073"
     }
   ]
 }
